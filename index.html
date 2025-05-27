@@ -5,60 +5,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi CV Profesional</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #fafafa;
       color: #333;
     }
 
     header {
-      background-color: #1a73e8;
-      color: white;
-      padding: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      background-color: white;
+      color: #1a73e8;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
     .header-content {
       display: flex;
       align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .profile-img {
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       object-fit: cover;
-      margin-right: 1.5rem;
-      border: 3px solid white;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      border: 3px solid #1a73e8;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .header-text h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
+      color: #1a73e8;
     }
 
     .header-text p {
-      margin: 0.3rem 0 0;
-      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #555;
     }
 
     nav {
-      background-color: #222;
-      padding: 0.75rem;
+      position: sticky;
+      top: 0;
+      background-color: white;
+      padding: 1rem 0;
       text-align: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
 
     nav a {
-      color: white;
-      margin: 0 1rem;
+      color: #333;
+      margin: 0 1.2rem;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
@@ -71,10 +77,10 @@
     section {
       padding: 2rem;
       max-width: 900px;
-      margin: 1.5rem auto 0 auto;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      margin: 2rem auto 0 auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     iframe,
@@ -85,30 +91,31 @@
 
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: #222;
+      padding: 1.5rem;
+      background-color: #1a73e8;
       color: white;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     .pdf-link {
       display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background-color: #1a73e8;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, #1a73e8, #4285f4);
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       margin-top: 1rem;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: transform 0.2s ease;
     }
 
     .pdf-link:hover {
-      background-color: #0c56c3;
+      transform: scale(1.05);
     }
 
     article h3 {
       margin-top: 0;
+      color: #1a73e8;
     }
   </style>
 </head>
@@ -133,31 +140,48 @@
   </nav>
 
   <section id="presentacion">
-    <h2>Presentación</h2>
-    <p>Estimado/a Responsable de Selección:</p>
-    <p>Me dirijo a usted para postularme al puesto de Python Developer en su empresa...</p>
-    <p>Atentamente,<br>Hugo Díaz</p>
-    <a class="pdf-link" href="Hugo_Diaz_CartaPresentacion.pdf" target="_blank">Ver carta de presentación (PDF)</a>
+    <h2>Bienvenido a mi CV Web!</h2>
+    <p>Mi nombre es Hugo Díaz, estudiante de la Universidad Politécnica de Madrid, poseo una sólida formación en
+      análisis de datos y desarrollo tecnológico. He trabajado
+      con Python y tengo un profundo conocimiento de bases de datos relacionales.
+      Además, durante mis prácticas en Inetum, en el departamento de Data & IA, adquirí
+      experiencia en modelos de lenguaje de gran tamaño (LLM´s), servicios en la nube, así
+      como en la gestión y despliegue de aplicaciones mediante Docker y Kubernetes. Mi
+      nivel de inglés es B2, y actualmente me estoy preparando para obtener la certificación
+      C1.
+    </p>
+    <a class="pdf-link" href="Hugo_Diaz_CartaPresentacion.pdf" target="_blank">Ver carta de presentación</a>
   </section>
 
   <section id="cv-tradicional">
     <h2>Currículum</h2>
-    <p>Graduado en Ingeniería Informática por la Universidad Politécnica de Madrid...</p>
-    <a class="pdf-link" href="HugoDiaz_CVTradicional.pdf" target="_blank">Descargar CV en PDF</a>
+    <p>Aquí puedes ver mi actual Curriculum Vitae. En resumen, soy estudiante en Ingeniería Informática por la
+      Universidad Politécnica de Madrid con
+      experiencia en análisis de datos y desarrollo tecnológico. Especializado en Python, bases
+      de datos relacionales y tecnologías en la nube. Durante mis prácticas en Inetum, trabajé
+      con modelos de lenguaje de gran tamaño (LLMs), Docker y Kubernetes, aplicando
+      soluciones innovadoras en el ámbito de la inteligencia artificial. Actualmente, me preparo
+      para obtener la certificación C1 en inglés.
+    </p>
+    <a class="pdf-link" href="HugoDiaz_CVTradicional.pdf" target="_blank">Ver CV completo</a>
   </section>
 
   <section id="video-cv">
     <h2>Vídeo Curriculum</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/C6gu-Blq5pU" title="YouTube video" frameborder="0"
-      allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/C6gu-Blq5pU" title="YouTube video"
+      frameborder="0" allowfullscreen></iframe>
   </section>
 
   <section id="blog">
     <h2>Blog Divulgativo</h2>
     <article>
       <h3>Apache Spark con Python: una guía sencilla para dominar el procesamiento de datos a gran escala</h3>
-      <p>En esta entrada presento una introducción clara y práctica a Apache Spark, una de las herramientas más potentes para el procesamiento distribuido de datos. A través de ejemplos con PySpark, explico cómo aprovechar su modelo de datos en memoria para transformar y analizar grandes volúmenes de información de forma eficiente. El artículo está pensado especialmente para quienes ya conocen Python y desean dar el salto al mundo del big data con una base sólida y bien estructurada.</p>
-      <a class="pdf-link" href="Entrada blog divulgativo.pdf" target="_blank">Ver entrada completa en PDF</a>
+      <p>En esta entrada presento una introducción clara y práctica a Apache Spark, una de las herramientas más potentes
+        para el procesamiento distribuido de datos. A través de ejemplos con PySpark, explico cómo aprovechar su modelo
+        de datos en memoria para transformar y analizar grandes volúmenes de información de forma eficiente. El artículo
+        está pensado especialmente para quienes ya conocen Python y desean dar el salto al mundo del big data con una
+        base sólida y bien estructurada.</p>
+      <a class="pdf-link" href="Entrada blog divulgativo.pdf" target="_blank">Ver la entrada completa</a>
     </article>
   </section>
 
@@ -165,7 +189,8 @@
     <h2>Contacto</h2>
     <p>Puedes escribirme a: <a href="mailto:hugojavier.diaz@alumnos.upm.es">hugojavier.diaz@alumnos.upm.es</a></p>
     <p>Teléfono: +34 606 628 931</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/hugo-d%C3%ADaz-ram%C3%ADrez-530577358/" target="_blank">https://www.linkedin.com/in/hugo-d%C3%ADaz-ram%C3%ADrez-530577358/</a>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/hugo-d%C3%ADaz-ram%C3%ADrez-530577358/"
+        target="_blank">https://www.linkedin.com/in/hugo-d%C3%ADaz-ram%C3%ADrez-530577358/</a>
     </p>
   </section>
 
