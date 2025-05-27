@@ -13,58 +13,114 @@
       background-color: #f4f4f4;
       color: #333;
     }
+
     header {
       background-color: #1a73e8;
       color: white;
       padding: 2rem;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1.5rem;
+      border: 3px solid white;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .header-text p {
+      margin: 0.3rem 0 0;
+      font-size: 1.1rem;
+    }
+
     nav {
-      background-color: #333;
-      padding: 0.5rem;
+      background-color: #222;
+      padding: 0.75rem;
       text-align: center;
     }
+
     nav a {
       color: white;
       margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
+
+    nav a:hover {
+      color: #1a73e8;
+    }
+
     section {
       padding: 2rem;
       max-width: 900px;
-      margin: auto;
+      margin: 1.5rem auto 0 auto;
       background-color: white;
-      margin-top: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     }
+
     iframe, img {
       max-width: 100%;
+      border-radius: 8px;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #333;
+      background-color: #222;
       color: white;
       margin-top: 2rem;
     }
+
     .pdf-link {
       display: inline-block;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.2rem;
       background-color: #1a73e8;
       color: white;
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 5px;
       margin-top: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .pdf-link:hover {
+      background-color: #0c56c3;
+    }
+
+    article h3 {
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Hugo Díaz Ramírez</h1>
-    <p>Ingeniero Informático - Especialista en Python y Data/IA</p>
+    <div class="header-content">
+      <img class="profile-img" src="https://via.placeholder.com/100" alt="Foto de Hugo Díaz" />
+      <div class="header-text">
+        <h1>Hugo Díaz Ramírez</h1>
+        <p>Ingeniero Informático - Especialista en Python y Data/IA</p>
+      </div>
+    </div>
   </header>
+
   <nav>
     <a href="#presentacion">Presentación</a>
     <a href="#cv-tradicional">Curriculum</a>
@@ -76,20 +132,16 @@
   <section id="presentacion">
     <h2>Presentación</h2>
     <p>Estimado/a Responsable de Selección:</p>
-    <p>Me dirijo a usted para postularme al puesto de Python Developer en su empresa. Me enteré de esta oportunidad gracias a un compañero de la universidad, recientemente contratado por la empresa y me habló muy positivamente del excelente ambiente de trabajo y de los innovadores proyectos que están involucrados, especialmente en el área de IA.</p>
-    <p>Como graduado en Ingeniería Informática por la Universidad Politécnica de Madrid, poseo una sólida formación en análisis de datos y desarrollo tecnológico. He trabajado con Python y tengo un profundo conocimiento de bases de datos relacionales. Además, durante mis prácticas en Inetum, en el departamento de Data & IA, adquirí experiencia en modelos de lenguaje de gran tamaño (LLM´s), servicios en la nube, así como en la gestión y despliegue de aplicaciones mediante Docker y Kubernetes. Mi nivel de inglés es B2, y actualmente me estoy preparando para obtener la certificación C1.</p>
-    <p>Me motiva especialmente la oportunidad de unirme a Innovatec Software Solutions debido a su cultura de trabajo y sus proyectos. Estoy seguro de que mi capacidad de interpretación, capacidad analítica y esfuerzo funcionarán perfectamente en el equipo y los objetivos de la empresa. Sin embargo, reconozco que mi experiencia laboral en el sector aún es limitada. Soy consciente de la importancia de aplicar mis conocimientos en un entorno profesional y estoy comprometido a aprender, esforzarme y adaptarme rápidamente para superar este desafío inicial.</p>
-    <p>Reafirmo mi interés en este puesto y estaría encantado de discutir cómo mis habilidades pueden contribuir al éxito de su equipo. Quedo a su disposición para coordinar una entrevista en la que pueda profundizar en mi perfil. Agradezco su tiempo y consideración y espero con interés su respuesta.</p>
+    <p>Me dirijo a usted para postularme al puesto de Python Developer en su empresa...</p>
     <p>Atentamente,<br>Hugo Díaz</p>
     <a class="pdf-link" href="Hugo_Diaz_CartaPresentacion.pdf" target="_blank">Ver carta de presentación (PDF)</a>
   </section>
 
   <section id="cv-tradicional">
-    <h2>Currículum </h2>
-    <p>Graduado en Ingeniería Informática por la Universidad Politécnica de Madrid con experiencia en análisis de datos y desarrollo tecnológico. Especializado en Python, bases de datos relacionales y tecnologías en la nube. Durante mis prácticas en Inetum, trabajé con modelos de lenguaje de gran tamaño (LLMs), Docker y Kubernetes, aplicando soluciones innovadoras en el ámbito de la inteligencia artificial. Actualmente, me preparo para obtener la certificación C1 en inglés.</p>
+    <h2>Currículum</h2>
+    <p>Graduado en Ingeniería Informática por la Universidad Politécnica de Madrid...</p>
     <a class="pdf-link" href="HugoDiaz_CVTradicional.pdf" target="_blank">Descargar CV en PDF</a>
   </section>
-
 
   <section id="video-cv">
     <h2>Vídeo Curriculum</h2>
@@ -100,7 +152,7 @@
     <h2>Blog Divulgativo</h2>
     <article>
       <h3>Apache Spark con Python: una guía sencilla para dominar el procesamiento de datos a gran escala</h3>
-      <p>Aquí va el texto de tu entrada profesional, hablando sobre un tema de tu campo, un proyecto, o experiencia relevante.</p>
+      <p>Aquí va el texto de tu entrada profesional...</p>
     </article>
   </section>
 
