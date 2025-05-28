@@ -11,13 +11,14 @@
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fafafa;
-      color: #333;
+      background-color: #fefefe;
+      color: #4b4453;
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: white;
-      color: #1a73e8;
+      background-color: #e3d5ca;
+      color: #5d3a3a;
       text-align: center;
       padding: 2rem 1rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -31,31 +32,22 @@
       gap: 1rem;
     }
 
-    .profile-img {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #1a73e8;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
     .header-text h1 {
       margin: 0;
       font-size: 2.5rem;
-      color: #1a73e8;
+      color: #5d3a3a;
     }
 
     .header-text p {
       margin-top: 0.5rem;
       font-size: 1.2rem;
-      color: #555;
+      color: #85586f;
     }
 
     nav {
       position: sticky;
       top: 0;
-      background-color: white;
+      background-color: #dbc1ac;
       padding: 1rem 0;
       text-align: center;
       z-index: 1000;
@@ -63,7 +55,7 @@
     }
 
     nav a {
-      color: #333;
+      color: #6f4e37;
       margin: 0 1.2rem;
       text-decoration: none;
       font-weight: bold;
@@ -71,7 +63,7 @@
     }
 
     nav a:hover {
-      color: #1a73e8;
+      color: #a0522d;
     }
 
     section {
@@ -92,7 +84,7 @@
     footer {
       text-align: center;
       padding: 1.5rem;
-      background-color: #1a73e8;
+      background-color: #bfa2a2;
       color: white;
       margin-top: 3rem;
     }
@@ -100,7 +92,7 @@
     .pdf-link {
       display: inline-block;
       padding: 0.75rem 1.5rem;
-      background: linear-gradient(135deg, #1a73e8, #4285f4);
+      background: linear-gradient(135deg, #d4a373, #e6ccb2);
       color: white;
       text-decoration: none;
       border-radius: 8px;
@@ -115,7 +107,33 @@
 
     article h3 {
       margin-top: 0;
-      color: #1a73e8;
+      color: #a0522d;
+    }
+
+    .presentacion-contenido {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      animation: fadeInUp 1s ease-out both;
+    }
+
+    .presentacion-contenido img {
+      width: 35%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -123,47 +141,71 @@
 <body>
   <header>
     <div class="header-content">
-      <img class="profile-img" src="foto.jpg" alt="Foto de Hugo Díaz" />
       <div class="header-text">
         <h1>Hugo Díaz Ramírez</h1>
-        <p>Ingeniero Informático - Especialista en Python y Data/IA</p>
+        <p>Ingeniero Informático · Python · Data · IA</p>
       </div>
     </div>
   </header>
 
   <nav>
-    <a href="#presentacion">Presentación</a>
-    <a href="#cv-tradicional">Curriculum</a>
-    <a href="#video-cv">Vídeo Curriculum</a>
-    <a href="#blog">Blog Divulgativo</a>
+    <a href="#presentacion">Inicio</a>
+    <a href="#cv-tradicional">Currículum</a>
+    <a href="#video-cv">Vídeo CV</a>
+    <a href="blog.html" target="_blank">Blog</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
   <section id="presentacion">
-    <h2>Bienvenido a mi CV Web!</h2>
-    <p>Mi nombre es Hugo Díaz, estudiante de la Universidad Politécnica de Madrid, poseo una sólida formación en
-      análisis de datos y desarrollo tecnológico. He trabajado
-      con Python y tengo un profundo conocimiento de bases de datos relacionales.
-      Además, durante mis prácticas en Inetum, en el departamento de Data & IA, adquirí
-      experiencia en modelos de lenguaje de gran tamaño (LLM´s), servicios en la nube, así
-      como en la gestión y despliegue de aplicaciones mediante Docker y Kubernetes. Mi
-      nivel de inglés es B2, y actualmente me estoy preparando para obtener la certificación
-      C1.
-    </p>
-    <a class="pdf-link" href="Hugo_Diaz_CartaPresentacion.pdf" target="_blank">Ver carta de presentación</a>
+    <h2>Bienvenido</h2>
+    <div class="presentacion-contenido">
+      <div>
+        <p>Hola, soy Hugo Díaz, graduado en Ingeniería Informática por la Universidad Politécnica de Madrid. Me apasiona el desarrollo backend, la inteligencia artificial y el análisis de datos. Actualmente, estoy buscando una oportunidad profesional donde pueda seguir creciendo, aportando mis conocimientos técnicos y aprendiendo de un equipo con experiencia.</p>
+        <p>Durante mis prácticas en Inetum trabajé con modelos de lenguaje de gran tamaño (LLM), despliegue con Docker y Kubernetes, y servicios cloud. Domino Python, SQL y Java, y he trabajado con bases de datos como MySQL y PostgreSQL. Me encuentro en preparación activa para obtener la certificación C1 en inglés.</p>
+        <p>Estoy motivado, soy resolutivo y me comprometo al máximo con los proyectos en los que participo. Si estás buscando a alguien que combine habilidades técnicas con actitud proactiva y capacidad de adaptación, estaré encantado de hablar contigo.</p>
+        <p>Gracias por tu tiempo.</p>
+      </div>
+      <img src="foto.jpg" alt="Foto de Hugo Díaz">
+    </div>
   </section>
 
   <section id="cv-tradicional">
     <h2>Currículum</h2>
-    <p>Aquí puedes ver mi actual Curriculum Vitae. En resumen, soy estudiante en Ingeniería Informática por la
-      Universidad Politécnica de Madrid con
-      experiencia en análisis de datos y desarrollo tecnológico. Especializado en Python, bases
-      de datos relacionales y tecnologías en la nube. Durante mis prácticas en Inetum, trabajé
-      con modelos de lenguaje de gran tamaño (LLMs), Docker y Kubernetes, aplicando
-      soluciones innovadoras en el ámbito de la inteligencia artificial. Actualmente, me preparo
-      para obtener la certificación C1 en inglés.
-    </p>
-    <a class="pdf-link" href="HugoDiaz_CVTradicional.pdf" target="_blank">Ver CV completo</a>
+    <h3>Perfil Profesional</h3>
+    <p>Graduado en Ingeniería Informática por la Universidad Politécnica de Madrid con experiencia en análisis de datos
+      y desarrollo tecnológico. Especializado en Python, bases de datos relacionales y tecnologías en la nube. Durante
+      mis prácticas en Inetum, trabajé con modelos de lenguaje de gran tamaño (LLMs), Docker y Kubernetes, aplicando
+      soluciones innovadoras en el ámbito de la inteligencia artificial. Actualmente, me preparo para obtener la
+      certificación C1 en inglés.</p>
+
+    <h3>Experiencia Laboral</h3>
+    <p><strong>Prácticas en Data & IA</strong><br>Inetum | Madrid, España | 2025 - Presente</p>
+    <ul>
+      <li>Modelos de lenguaje de gran tamaño (LLMs) en entornos productivos.</li>
+      <li>Despliegues en la nube utilizando Docker y Kubernetes.</li>
+      <li>Manejo de grandes volúmenes de datos para optimizar procesos internos.</li>
+      <li>Colaboración con equipos de desarrollo para integrar soluciones de IA en sistemas empresariales.</li>
+    </ul>
+
+    <h3>Formación Académica</h3>
+    <p><strong>Grado en Ingeniería Informática</strong><br>Universidad Politécnica de Madrid | 2020 - Presente</p>
+
+    <h3>Habilidades Técnicas y Competencias</h3>
+    <ul>
+      <li><strong>Lenguajes de programación:</strong> Python, SQL, Java, C, R, Matlab</li>
+      <li><strong>Bases de datos:</strong> MySQL, PostgreSQL</li>
+      <li><strong>Infraestructura y despliegue:</strong> Docker, Kubernetes, AWS, Azure</li>
+      <li><strong>Análisis de datos e IA:</strong> Modelos de lenguaje (LLMs), Machine Learning</li>
+      <li><strong>Idiomas:</strong> Español (Nativo), Inglés (B2 – Preparando C1)</li>
+    </ul>
+
+    <h3>Certificaciones y Formación Complementaria</h3>
+    <ul>
+      <li>Curso de Machine Learning – Coursera</li>
+      <li>Curso de Cloud Computing con AWS – Udemy</li>
+    </ul>
+
+    <a class="pdf-link" href="HugoDiaz_CVTradicional.pdf" target="_blank">Descargar CV en PDF</a>
   </section>
 
   <section id="video-cv">
@@ -190,8 +232,7 @@
     <p>Puedes escribirme a: <a href="mailto:hugojavier.diaz@alumnos.upm.es">hugojavier.diaz@alumnos.upm.es</a></p>
     <p>Teléfono: +34 606 628 931</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/hugo-d%C3%ADaz-ram%C3%ADrez-530577358/"
-        target="_blank">https://www.linkedin.com/in/hugo-d%C3%ADaz-ram%C3%ADrez-530577358/</a>
-    </p>
+        target="_blank">https://www.linkedin.com/in/hugo-díaz-ramírez-530577358/</a></p>
   </section>
 
   <footer>
