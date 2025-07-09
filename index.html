@@ -125,6 +125,79 @@
       object-fit: cover;
     }
 
+    /* Estilos para la sección de perfil técnico */
+    .perfil-tecnico {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .perfil-tecnico h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #5d3a3a;
+      text-align: center;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      padding: 2rem 1.5rem;
+      text-align: left;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #85586f;
+      text-align: center;
+    }
+
+    .bar-container {
+      background-color: #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .bar {
+      height: 18px;
+      border-radius: 8px;
+      background-color: #d4a373;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 4px;
+      color: #5d3a3a;
+    }
+
+    .soft-skills {
+      list-style-type: "✔️ ";
+      padding-left: 1.2rem;
+      color: #4b4453;
+    }
+
+    .soft-skills li {
+      margin-bottom: 0.5rem;
+    }
+
+    .bar-wrapper {
+      margin-bottom: 1rem;
+    }
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -208,6 +281,71 @@
     <a class="pdf-link" href="HugoDiaz_CVTradicional.pdf" target="_blank">Descargar CV en PDF</a>
   </section>
 
+  <!-- Sección de Perfil Técnico Integrada -->
+  <div class="perfil-tecnico">
+    <h2>Perfil Técnico</h2>
+    
+    <div class="card-container">
+      <!-- Tarjeta 1: Lenguajes de Programación -->
+      <div class="card">
+        <h3>Lenguajes de Programación</h3>
+
+        <div class="bar-wrapper">
+          <div class="label">Python</div>
+          <div class="bar-container"><div class="bar" style="width: 90%;"></div></div>
+        </div>
+
+        <div class="bar-wrapper">
+          <div class="label">C</div>
+          <div class="bar-container"><div class="bar" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="bar-wrapper">
+          <div class="label">Java</div>
+          <div class="bar-container"><div class="bar" style="width: 80%;"></div></div>
+        </div>
+
+        <div class="bar-wrapper">
+          <div class="label">MATLAB</div>
+          <div class="bar-container"><div class="bar" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="bar-wrapper">
+          <div class="label">R</div>
+          <div class="bar-container"><div class="bar" style="width: 90%;"></div></div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Idiomas -->
+      <div class="card">
+        <h3>Idiomas</h3>
+
+        <div class="bar-wrapper">
+          <div class="label">Español</div>
+          <div class="bar-container"><div class="bar" style="width: 100%;"></div></div>
+        </div>
+
+        <div class="bar-wrapper">
+          <div class="label">Inglés</div>
+          <div class="bar-container"><div class="bar" style="width: 80%;"></div></div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Soft Skills -->
+      <div class="card">
+        <h3>Habilidades</h3>
+        <ul class="soft-skills">
+          <li>Comunicación efectiva</li>
+          <li>Resolución de problemas</li>
+          <li>Trabajo en equipo</li>
+          <li>Adaptabilidad</li>
+          <li>Gestión del tiempo</li>
+          <li>Pensamiento crítico</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <section id="video-cv">
     <h2>Vídeo Curriculum</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/C6gu-Blq5pU" title="YouTube video"
@@ -239,5 +377,4 @@
     <p>&copy; 2025 Hugo Díaz Ramírez - CV Web</p>
   </footer>
 </body>
-
 </html>
